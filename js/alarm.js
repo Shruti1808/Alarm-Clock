@@ -2,16 +2,25 @@ function Alarm(time) {
   this.time = time;
 }
 
-Alarm.prototype.ringAlarm = function(){
-  var inputTime = 
-  var currentTime = moment().format('HH:mm A');
-  var alarm = (sound goes here);
-  if(inputTime != currentTime){
-    return alert("it works");
-  } else{
 
-  }
+Alarm.prototype.setAlarm = function(){
+var inputTime = parseInt($('.time').text(moment().format('HH:mm A')));
+var currentTime = parseInt($("#setTime").text(moment().format('HH:mm A')));
+
+if(inputTime === currentTime){
+  console.log("hello");
 }
-module.exports = {
-  Alarm: Alarm
 };
+
+// Alarm.prototype.setAlarm = function(){
+//     var time = moment().format('HH:mm A');
+//     timeSplit = time.split(":");
+//     timeArray = time.split(" ");
+//     var A = timeArray[1];
+//     var formatTime;
+//     if(A === "PM" || A === "pm"){
+//       formatTime = moment().hour(parseInt(timeSplit[0]+12).minute(parseInt))
+//     }
+// };
+
+exports.alarmModule = Alarm;
