@@ -3,7 +3,7 @@ function Alarm(time) {
 }
 
 Alarm.prototype.ringAlarm = function(){
-  var inputTime = document.getElementById('#time');
+  var inputTime = 
   var currentTime = moment().format('HH:mm A');
   var alarm = (sound goes here);
   if(inputTime != currentTime){
